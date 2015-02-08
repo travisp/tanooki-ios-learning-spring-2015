@@ -55,6 +55,11 @@
 
 }
 
+- (void) dealloc
+{
+    NSLog(@" Destroyed: %@", self);
+}
+
 - (instancetype)init
 {
     return [self initWithItemName:@"Item"];
@@ -68,6 +73,30 @@
 {
     return _itemName;
 }
+
+- (void)setContainedItem:(Item *)item
+{
+    _containedItem = item;
+    // When given an item to contain, the
+    // item will be given a pointer to its container
+    item.container = self;
+}
+
+- (Item *)containedItem
+{
+    return _containedItem;
+}
+
+- (void)setContainer:(Item *)item
+{
+    _container = item;
+}
+
+- (Item *)container
+{
+    return _container;
+}
+
 - (void)setSerialNumber:(NSString *)str
 {
     _serialNumber = str;

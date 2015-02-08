@@ -13,16 +13,23 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // Create a mutable array object, store its address in items variable
         NSMutableArray *items = [[NSMutableArray alloc] init];
+  
+        Item *backpack = [[Item alloc] initWithItemName:@"BackPack"];
+        [items addObject:backpack];
         
-        for (int i = 0; i < 10; i++) {
-            Item *item = [Item randomItem];
-            [items addObject:item];
-        }
+        Item *calculator = [[Item alloc] initWithItemName:@"Calculator"];
+        [items addObject:calculator];
+        
+        backpack.containedItem = calculator;
+        
+        backpack = nil;
+        calculator = nil;
         
         for (Item *item in items) {
             NSLog(@"%@", item);
         }
         
+        NSLog(@"Setting items to nil...");
         items = nil;
     }
     return 0;
