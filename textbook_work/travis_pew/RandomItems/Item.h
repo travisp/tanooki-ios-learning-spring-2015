@@ -16,7 +16,7 @@
     NSDate *_dateCreated;
     
     Item *_containedItem;
-    Item *_container;
+    __weak Item *_container;
 }
 
 + (instancetype)randomItem;
