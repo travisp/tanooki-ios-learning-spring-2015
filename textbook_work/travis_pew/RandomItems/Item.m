@@ -52,12 +52,6 @@
     return [self initWithItemName:name
                    valueInDollars:0
                      serialNumber:@""];
-
-}
-
-- (void) dealloc
-{
-    NSLog(@" Destroyed: %@", self);
 }
 
 - (instancetype)init
@@ -65,58 +59,17 @@
     return [self initWithItemName:@"Item"];
 }
 
-- (void)setItemName:(NSString *)str
+- (void)setContainedItem:(Item *)containedItem
 {
-    _itemName = str;
-}
-- (NSString *)itemName
-{
-    return _itemName;
+    _containedItem = containedItem;
+    self.containedItem.container = self;
 }
 
-- (void)setContainedItem:(Item *)item
+- (void) dealloc
 {
-    _containedItem = item;
-    // When given an item to contain, the
-    // item will be given a pointer to its container
-    item.container = self;
+    NSLog(@" Destroyed: %@", self);
 }
 
-- (Item *)containedItem
-{
-    return _containedItem;
-}
-
-- (void)setContainer:(Item *)item
-{
-    _container = item;
-}
-
-- (Item *)container
-{
-    return _container;
-}
-
-- (void)setSerialNumber:(NSString *)str
-{
-    _serialNumber = str;
-}
-- (NSString *)serialNumber
-{
-    return _serialNumber;
-}
-- (void)setValueInDollars:(int)v
-{
-    _valueInDollars = v;
-}
-- (int)valueInDollars
-{
-    return _valueInDollars;
-}
-- (NSDate *)dateCreated
-{
-    return _dateCreated;
-}
 - (NSString *)description
 {
     NSString *descriptionString =
