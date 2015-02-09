@@ -36,6 +36,9 @@
     UIBezierPath *path = [[UIBezierPath alloc] init];
     
     for (float currentRadius = maxRadius; currentRadius > 0; currentRadius -= 20) {
+        CGPoint newPoint = CGPointMake(center.x + currentRadius, center.y);
+        [path moveToPoint:newPoint];
+        
         [path addArcWithCenter:center
                         radius:currentRadius
                     startAngle:0.0
