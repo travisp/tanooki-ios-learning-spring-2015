@@ -34,6 +34,12 @@
                   endAngle:M_PI * 2.0
                  clockwise:YES];
     
+    // Configure line width to 10 points
+    path.lineWidth = 10;
+    
+    // Configure the drawing color to light gray
+    [[UIColor lightGrayColor] setStroke];
+    
     // Draw the line!
     [path stroke];
 }
