@@ -12,6 +12,7 @@
 		1F63E2FD1A8968E500101566 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F63E2FC1A8968E500101566 /* Images.xcassets */; };
 		1F63E3001A8968E500101566 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F63E2FE1A8968E500101566 /* LaunchScreen.xib */; };
 		1F63E30C1A8968E500101566 /* HypnosisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63E30B1A8968E500101566 /* HypnosisterTests.m */; };
+		1F63E31A1A896D5C00101566 /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63E3191A896D5C00101566 /* HypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 		1F63E3051A8968E500101566 /* HypnosisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypnosisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F63E30A1A8968E500101566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F63E30B1A8968E500101566 /* HypnosisterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnosisterTests.m; sourceTree = "<group>"; };
+		1F63E3181A896D5C00101566 /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		1F63E3191A896D5C00101566 /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				1F63E2FC1A8968E500101566 /* Images.xcassets */,
 				1F63E2FE1A8968E500101566 /* LaunchScreen.xib */,
 				1F63E2F51A8968E500101566 /* Supporting Files */,
+				1F63E3181A896D5C00101566 /* HypnosisView.h */,
+				1F63E3191A896D5C00101566 /* HypnosisView.m */,
 			);
 			path = Hypnosister;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			files = (
 				1F63E2FB1A8968E500101566 /* AppDelegate.m in Sources */,
 				1F63E2F81A8968E500101566 /* main.m in Sources */,
+				1F63E31A1A896D5C00101566 /* HypnosisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +400,7 @@
 				1F63E3111A8968E500101566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F63E3121A8968E500101566 /* Build configuration list for PBXNativeTarget "HypnosisterTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +409,7 @@
 				1F63E3141A8968E500101566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
