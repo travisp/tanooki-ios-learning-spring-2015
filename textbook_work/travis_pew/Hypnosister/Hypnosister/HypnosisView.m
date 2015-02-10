@@ -24,6 +24,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     CGRect bounds = self.bounds;
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
     
     // Figure out the center of the bounds rectangle
     CGPoint center;
@@ -61,7 +62,20 @@
                                  logoImage.size.width / 2.0,
                                  logoImage.size.height / 2.0);
     
+
+    
+    
+    CGContextSaveGState(currentContext);
+    
+    CGContextSetShadow(currentContext, CGSizeMake(4,7), 3);
+
+    // Draw stuff here, it will appear with a shadow
     [logoImage drawInRect:logoRect];
+    
+    CGContextRestoreGState(currentContext);
+    
+    // Draw stuff here, it will appear with no shadow
+
 }
 
 
