@@ -39,6 +39,13 @@
     return self;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    NSLog(@"ReminderViewController loaded its view");
+}
+
 
 - (IBAction)addReminder:(id)sender
 {
