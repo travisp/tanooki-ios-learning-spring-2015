@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HypnosisViewController.h"
+#import "ReminderViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +21,17 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+    // This line will generate a warning, ignore it for now
     HypnosisViewController *hvc = [[HypnosisViewController alloc] init];
-    self.window.rootViewController = hvc;
+    
+    // This will get a pointer to an object that represents the app bundle
+    NSBundle *appBundle = [NSBundle mainBundle];
+    
+    // Look in the appBundle for the file ReminderViewController.xib
+    ReminderViewController *rvc = [[ReminderViewController alloc] initWithNibName:@"ReminderViewController"
+                                                                           bundle:appBundle];
+    
+    self.window.rootViewController = rvc;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
