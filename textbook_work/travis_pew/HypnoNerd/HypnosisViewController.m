@@ -54,10 +54,19 @@
     textField.placeholder = @"Hypnotize me";
     textField.returnKeyType = UIReturnKeyDone;
     
+    // There will be a warning on this line. We will discuss is shortly.
+    textField.delegate = self;
+    
     [backgroundView addSubview:textField];
     
     // Set it as *the* view of this view controller
     self.view = backgroundView;    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"%@", textField.text);
+    return YES;
 }
 
 @end
