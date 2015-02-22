@@ -46,6 +46,13 @@
     CGRect frame = [UIScreen mainScreen].bounds;
     HypnosisView *backgroundView = [[HypnosisView alloc] initWithFrame:frame];
     
+    CGRect textFieldRect = CGRectMake(40, 70, 230, 30);
+    UITextField *textField = [[UITextField alloc] initWithFrame:textFieldRect];
+    
+    // Setting the border style on the text field will allow us to see it more easily
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    [backgroundView addSubview:textField];
+    
     // Set it as *the* view of this view controller
     self.view = backgroundView;    
 }
