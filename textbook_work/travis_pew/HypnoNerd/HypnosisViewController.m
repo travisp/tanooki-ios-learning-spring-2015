@@ -9,6 +9,9 @@
 #import "HypnosisViewController.h"
 #import "HypnosisView.h"
 
+@interface HypnosisViewController () <UITextFieldDelegate>
+@end
+
 @implementation HypnosisViewController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil
