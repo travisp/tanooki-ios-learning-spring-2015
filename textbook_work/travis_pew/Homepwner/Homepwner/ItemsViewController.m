@@ -29,6 +29,15 @@
     return [self init];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"UITableViewCell"];
+    
+}
+
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
@@ -40,9 +49,9 @@
 {
     // Create an instance of UITableViewCell, with default appearance
     UITableViewCell *cell =
-        [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                               reuseIdentifier:@"UITableViewCell"];
-    
+        [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+                                        forIndexPath:indexPath];
+         
     // Set the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
     // will appear in on the tableview
