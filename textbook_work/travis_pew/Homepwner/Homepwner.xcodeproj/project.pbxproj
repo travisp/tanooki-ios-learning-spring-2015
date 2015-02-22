@@ -14,6 +14,7 @@
 		1F4723751A9A6C90003325C0 /* HomepwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4723741A9A6C90003325C0 /* HomepwnerTests.m */; };
 		1F4723801A9A6D69003325C0 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F47237F1A9A6D69003325C0 /* ItemsViewController.m */; };
 		1F4723831A9A6FB1003325C0 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4723821A9A6FB1003325C0 /* Item.m */; };
+		1F4723861A9A7049003325C0 /* ItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4723851A9A7049003325C0 /* ItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		1F47237F1A9A6D69003325C0 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
 		1F4723811A9A6FB1003325C0 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		1F4723821A9A6FB1003325C0 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		1F4723841A9A7049003325C0 /* ItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStore.h; sourceTree = "<group>"; };
+		1F4723851A9A7049003325C0 /* ItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 			children = (
 				1F4723811A9A6FB1003325C0 /* Item.h */,
 				1F4723821A9A6FB1003325C0 /* Item.m */,
+				1F4723841A9A7049003325C0 /* ItemStore.h */,
+				1F4723851A9A7049003325C0 /* ItemStore.m */,
 				1F47237E1A9A6D69003325C0 /* ItemsViewController.h */,
 				1F47237F1A9A6D69003325C0 /* ItemsViewController.m */,
 				1F4723621A9A6C90003325C0 /* AppDelegate.h */,
@@ -224,6 +229,7 @@
 				1F4723801A9A6D69003325C0 /* ItemsViewController.m in Sources */,
 				1F4723641A9A6C90003325C0 /* AppDelegate.m in Sources */,
 				1F4723611A9A6C90003325C0 /* main.m in Sources */,
+				1F4723861A9A7049003325C0 /* ItemStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
