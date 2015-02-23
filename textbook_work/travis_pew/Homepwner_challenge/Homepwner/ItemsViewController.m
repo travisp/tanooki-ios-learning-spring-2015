@@ -63,6 +63,16 @@ titleForHeaderInSection:(NSInteger)section
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == [self tableView:tableView numberOfRowsInSection:indexPath.section] - 1) {
+        return 44;
+    } else {
+        return 60;
+    }
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,7 +81,9 @@ titleForHeaderInSection:(NSInteger)section
     UITableViewCell *cell =
         [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
                                         forIndexPath:indexPath];
-         
+    
+    cell.textLabel.font = [UIFont fontWithName:cell.textLabel.font.fontName
+                                          size:20];
     // Set the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
     // will appear in on the tableview
@@ -81,11 +93,13 @@ titleForHeaderInSection:(NSInteger)section
     } else {
         items = [[ItemStore sharedStore] cheapItems];
     }
+
     if (indexPath.row >= [items count]) {
         cell.textLabel.text = @"No more items!";
     } else {
         Item *item = items[indexPath.row];
         cell.textLabel.text = [item description];
+
     }
     
     return cell;
