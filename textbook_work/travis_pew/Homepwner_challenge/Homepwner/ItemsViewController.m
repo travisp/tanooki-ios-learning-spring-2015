@@ -42,9 +42,9 @@
  numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {
-        return [[[ItemStore sharedStore] expensiveItems] count];
+        return [[[ItemStore sharedStore] expensiveItems] count] + 1;
     } else {
-        return [[[ItemStore sharedStore] cheapItems] count];
+        return [[[ItemStore sharedStore] cheapItems] count] + 1;
     }
 }
 
@@ -81,9 +81,12 @@ titleForHeaderInSection:(NSInteger)section
     } else {
         items = [[ItemStore sharedStore] cheapItems];
     }
-    Item *item = items[indexPath.row];
-    
-    cell.textLabel.text = [item description];
+    if (indexPath.row >= [items count]) {
+        cell.textLabel.text = @"No more items!";
+    } else {
+        Item *item = items[indexPath.row];
+        cell.textLabel.text = [item description];
+    }
     
     return cell;
 }
