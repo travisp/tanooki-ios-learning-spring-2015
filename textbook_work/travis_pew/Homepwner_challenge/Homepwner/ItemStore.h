@@ -13,6 +13,8 @@
 @interface ItemStore : NSObject
 
 @property (nonatomic, readonly, copy) NSArray *allItems;
+@property (nonatomic, readonly, copy) NSArray *expensiveItems;
+@property (nonatomic, readonly, copy) NSArray *cheapItems;
 
 // Notice that this is a class method and prefixed with a + instead of a -
 + (instancetype)sharedStore;

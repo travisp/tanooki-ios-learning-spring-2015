@@ -53,6 +53,18 @@
     return [self.privateItems copy];
 }
 
+- (NSArray *)expensiveItems
+{
+    NSPredicate *bExpensive = [NSPredicate predicateWithFormat:@"valueInDollars > 50"];
+    return [self.privateItems filteredArrayUsingPredicate:bExpensive];
+}
+
+- (NSArray *)cheapItems
+{
+    NSPredicate *bCheap = [NSPredicate predicateWithFormat:@"valueInDollars <= 50"];
+    return [self.privateItems filteredArrayUsingPredicate:bCheap];
+}
+
 - (Item *)createItem
 {
     Item *item = [Item randomItem];
