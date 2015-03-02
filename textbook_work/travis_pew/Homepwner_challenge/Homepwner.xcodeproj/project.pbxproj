@@ -412,7 +412,6 @@
 				1F47237A1A9A6C90003325C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		1F47237B1A9A6C90003325C0 /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -421,7 +420,6 @@
 				1F47237D1A9A6C90003325C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
