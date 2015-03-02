@@ -41,28 +41,8 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return [[[ItemStore sharedStore] expensiveItems] count];
-    } else {
-        return [[[ItemStore sharedStore] cheapItems] count];
-    }
+    return [[[ItemStore sharedStore] allItems] count];
 }
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 2;
-}
-
-- (NSString *)tableView:(UITableView *)tableView
-titleForHeaderInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return @"> $50";
-    } else {
-        return @"Everything Else";
-    }
-}
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -75,12 +55,7 @@ titleForHeaderInSection:(NSInteger)section
     // Set the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
     // will appear in on the tableview
-    NSArray *items = nil;
-    if (indexPath.section == 0) {
-        items = [[ItemStore sharedStore] expensiveItems];
-    } else {
-        items = [[ItemStore sharedStore] cheapItems];
-    }
+    NSArray *items = [[ItemStore sharedStore] allItems];
     Item *item = items[indexPath.row];
     
     cell.textLabel.text = [item description];
