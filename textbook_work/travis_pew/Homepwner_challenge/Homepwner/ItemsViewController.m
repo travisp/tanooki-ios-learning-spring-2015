@@ -32,6 +32,13 @@
 
 - (IBAction)addNewItem:(id)sender
 {
+    Item *newItem = [[ItemStore sharedStore] createItem];
+    
+    NSInteger lastRow = [[[ItemStore sharedStore] allItems] indexOfObject:newItem];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    
+    [self.tableView insertRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationTop];
     
 }
 
