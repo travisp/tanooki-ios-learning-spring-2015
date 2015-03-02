@@ -23,9 +23,7 @@
     // Call the superclass's designated initializer
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        for (int i = 0; i < 5; i++) {
-            [[ItemStore sharedStore] createItem];
-        }
+
     }
     return self;
 }
@@ -92,6 +90,21 @@
     [self.tableView setTableHeaderView:header];
     
 }
+
+- (void) tableView:( UITableView *) tableView commitEditingStyle:( UITableViewCellEditingStyle) editingStyle forRowAtIndexPath:( NSIndexPath *) indexPath
+{
+    // If the table view is asking to commit a delete command...
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *items = [[ItemStore sharedStore] allItems];
+        Item *item = items[indexPath.row];
+        [[ItemStore sharedStore] removeItem:item];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+    }
+    
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section

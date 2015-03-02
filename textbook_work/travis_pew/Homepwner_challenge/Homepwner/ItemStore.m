@@ -62,4 +62,9 @@
     return item;
 }
 
+- (void)removeItem:(Item *)item
+{
+    [self.privateItems removeObjectIdenticalTo:item];
+}
+
 @end
