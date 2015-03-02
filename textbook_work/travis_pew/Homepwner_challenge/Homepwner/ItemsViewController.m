@@ -10,6 +10,12 @@
 #import "ItemStore.h"
 #import "Item.h"
 
+@interface ItemsViewController ()
+
+@property (nonatomic,strong) IBOutlet UIView *headerView;
+
+@end
+
 @implementation ItemsViewController
 
 - (instancetype)init
@@ -24,6 +30,29 @@
     return self;
 }
 
+- (IBAction)addNewItem:(id)sender
+{
+    
+}
+
+- (IBAction)toggleEditingMode:(id)sender
+{
+    
+}
+
+- (UIView *)headerView
+{
+    // If you have not loaded headerView yet...
+    if (!_headerView) {
+        // Load HeaderView.xib
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView"
+                                      owner:self
+                                    options: nil];
+    }
+    
+    return _headerView;
+}
+
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
     return [self init];
@@ -33,8 +62,15 @@
 {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout=UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars=NO;
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
+    
+    UIView *header = self.headerView;
+    [self.tableView setTableHeaderView:header];
     
 }
 

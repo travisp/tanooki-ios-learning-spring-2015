@@ -15,6 +15,7 @@
 		1F4723801A9A6D69003325C0 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F47237F1A9A6D69003325C0 /* ItemsViewController.m */; };
 		1F4723831A9A6FB1003325C0 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4723821A9A6FB1003325C0 /* Item.m */; };
 		1F4723861A9A7049003325C0 /* ItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4723851A9A7049003325C0 /* ItemStore.m */; };
+		1FAE1C411AA51B4B00B44971 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE1C401AA51B4B00B44971 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		1F4723821A9A6FB1003325C0 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		1F4723841A9A7049003325C0 /* ItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStore.h; sourceTree = "<group>"; };
 		1F4723851A9A7049003325C0 /* ItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStore.m; sourceTree = "<group>"; };
+		1FAE1C401AA51B4B00B44971 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		1F4723521A9A6C90003325C0 = {
 			isa = PBXGroup;
 			children = (
+				1FAE1C401AA51B4B00B44971 /* HeaderView.xib */,
 				1F47235D1A9A6C90003325C0 /* Homepwner */,
 				1F4723711A9A6C90003325C0 /* HomepwnerTests */,
 				1F47235C1A9A6C90003325C0 /* Products */,
@@ -206,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAE1C411AA51B4B00B44971 /* HeaderView.xib in Resources */,
 				1F4723691A9A6C90003325C0 /* LaunchScreen.xib in Resources */,
 				1F4723661A9A6C90003325C0 /* Images.xcassets in Resources */,
 			);
@@ -412,6 +416,7 @@
 				1F47237A1A9A6C90003325C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F47237B1A9A6C90003325C0 /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				1F47237D1A9A6C90003325C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
