@@ -53,6 +53,22 @@
     return [self.privateItems copy];
 }
 
+- (void)moveItemAtIndex:(NSUInteger)fromIndex
+                toIndex:(NSUInteger)toIndex
+{
+    if (fromIndex == toIndex) {
+        return;
+    }
+    
+    Item *item = self.privateItems[fromIndex];
+    
+    [self.privateItems removeObjectAtIndex:fromIndex];
+    
+    [self.privateItems insertObject:item atIndex:toIndex];
+        
+    
+}
+
 - (Item *)createItem
 {
     Item *item = [Item randomItem];

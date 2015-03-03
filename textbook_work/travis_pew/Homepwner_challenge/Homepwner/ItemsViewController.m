@@ -40,6 +40,13 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+      toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [[ItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row
+                                     toIndex:destinationIndexPath.row];
+}
+
 - (IBAction)toggleEditingMode:(id)sender
 {
     // If you are currently in editing mode...
